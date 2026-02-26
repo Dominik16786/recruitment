@@ -54,7 +54,6 @@ func fetchResults(endpoint, term, resultType string) ([]SearchResult, error) {
 	return results, nil
 }
 
-// Handler HTTP dla /search
 func SearchHandler(w http.ResponseWriter, r *http.Request) {
 	term := r.URL.Query().Get("term")
 	limitParam := r.URL.Query().Get("limit")
